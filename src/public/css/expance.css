@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 17px;
+	background: linear-gradient(to top left, powderblue, pink);
+}
+
+table {
+	width: 55%;
+	border-collapse: collapse;
+	border-radius: 10%;
+}
+
+thead {
+  	background-color: rgba(255, 0, 0, 0.4);
+  	font-size: 20px;
+  	color: white;
+}
+
+tbody {
+	background-color: rgba(0, 0, 0, 0.2);
+	font-weight: 500;
+	font-size: 20px;
+	color: white;
+}
+
+th, td {
+  	text-align: center;
+}
+
+th, td {
+  	padding: 15px;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 55%;
+	margin-bottom: 25px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-size: 25px;
+	background-color: rgba(255, 0, 0, 0.4);
+	padding: 15px;
+	border-radius: 5px;
+}
+
+#expance-form {
+	margin-top: 15px;
+	width:  55%;
+	display: flex;
+}
+
+#target, #money {
+	width:  43%;
+	padding:  10px 15px;
+	outline: none;
+	background-color: rgba(0, 0, 0, 0.2);
+	border:  none;
+	border-radius: 3px;
+	color: white;
+	font-size: 17px;
+}
+
+#target::placeholder, #money::placeholder {
+	color:  white;
+	font-size: 17px;
+}
+
+#money {
+	margin:  0 5px;
+}
+
+.button {
+	outline: none;
+	border:  none;
+	background-color: rgba(255, 0, 0, 0.4);
+	color:  white;
+	font-size: 17px;
+	border-radius: 4px;
+	cursor: pointer;
+	width:  15%;
+}
