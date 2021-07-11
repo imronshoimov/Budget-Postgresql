@@ -1,7 +1,6 @@
 const model = require('./model')
 
 const GET = async (req, res) => {
-    console.log(await model.getExpances());
     res.render('expance.html', { expances: await model.getExpances() })
 }
 

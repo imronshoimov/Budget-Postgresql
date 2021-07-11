@@ -17,10 +17,17 @@ const INSERT_EXPANCE = `
     RETURNING *
 `
 
+const DELETE_EXPANCE = `
+    DELETE FROM expance 
+    WHERE id = $1
+`
+
 const getExpances = () => fetchAll(EXPANCES)
 
 const insertExpance = ({ type, cost }) => fetch(INSERT_EXPANCE, type, cost - 0)
 
-module.exports = { getExpances, insertExpance }
+const deleteExpance = ({ expanceId }) => fetch(DELETE_EXPANCE, expanceId)
+
+module.exports = { getExpances, insertExpance, deleteExpance }
 
 

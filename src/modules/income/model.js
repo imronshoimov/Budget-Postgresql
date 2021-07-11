@@ -17,8 +17,16 @@ const INSERT_INCOME = `
     RETURNING *;
 `
 
+const DELETE_INCOME = `
+    DELETE FROM income 
+    WHERE id = $1
+`
+
 const getIncomes = () => fetchAll(INCOMES)
 
 const insertIncome = ({ type, cost }) => fetch(INSERT_INCOME, type, cost - 0)
 
-module.exports = { getIncomes, insertIncome }
+const deleteIncome = ({ incomeId }) => fetch(DELETE_INCOME, incomeId)
+
+
+module.exports = { getIncomes, insertIncome, deleteIncome }

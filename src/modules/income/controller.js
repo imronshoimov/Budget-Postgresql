@@ -13,4 +13,13 @@ const POST = (req, res) => {
     }
 }   
 
-module.exports = { GET, POST }
+const DELETE = (req, res) => {
+    try {
+        let data = model.deleteIncome(req.params)
+        res.redirect('/income')
+    } catch(error){
+        res.status(400).json({ message: error.message })
+    }
+}  
+
+module.exports = { GET, POST, DELETE }
