@@ -1,9 +1,7 @@
 const router = require('express').Router()
-const { GET, GET_MONEY } = require('./controller')
+const { GET } = require('./controller')
 
-router.route('/total/money').get(GET_MONEY)
-
-router.route('/tolal')
+router.route('/total')
     .get(GET)
 
 module.exports = router
