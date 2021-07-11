@@ -1,9 +1,7 @@
-const GET_MONEY = (req, res) => {
-    res.render('income.html')
-}
+const model = require('./model')
 
 const GET = (req, res) => {
-    
+    res.render('income.html', { expances: await model.getExpances() })
 }
 
 const POST = (req, res) => {

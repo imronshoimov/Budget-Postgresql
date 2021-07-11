@@ -6,7 +6,7 @@ let pool = new Pool(pgConfig)
 const fetch = async (query, ...params) => {
     const client = await pool.connect()
     try {
-        const { rows: [ row ] } = client.query(query, params ? params : null)
+        const { rows: [ row ] } = await client.query(query, params ? params : null)
         return row
     } catch(err) {
         console.log(err);
@@ -18,7 +18,7 @@ const fetch = async (query, ...params) => {
 const fetchAll = async (query, ...params) => {
     const client = await pool.connect()
     try {
-        const { rows } = client.query(query, params ? params : null)
+        const { rows } = await client.query(query, params ? params : null)
         return rows
     } catch(err) {
         console.log(err);
