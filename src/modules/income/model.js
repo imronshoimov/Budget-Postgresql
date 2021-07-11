@@ -1,6 +1,6 @@
 const { fetch, fetchAll } = require('../../lib/postgres')
 
-const EXPANCES = `
+const INCOMES = `
     SELECT 
         id,
         type,
@@ -9,6 +9,16 @@ const EXPANCES = `
     FROM expance;
 `
 
-const getExpances = () => fetchAll(EXPANCES)
+const INSERT_INCOME = `
+    INSERT INTO income (
+        type,
+        cost
+    ) VALUES ($1, $2)
+    RETURNING *
+`
 
-module.exports = { getExpances }
+const getExpances = () => fetchAll(INCOMES)
+
+const insertIncome = ({ type, cost }) => fetch(INSERT_INCOME, type, +cost)
+
+module.exports = { getExpances, insertIncome }

@@ -1,11 +1,16 @@
 const model = require('./model')
 
-const GET = (req, res) => {
+const GET = async (req, res) => {
     res.render('income.html', { expances: await model.getExpances() })
 }
 
 const POST = (req, res) => {
-    console.log(req.body);
+    try {
+        model.insertIncome(req.body)
+        res.redirect('/income')
+    } catch(error){
+        res.status(400).json({ message: error.message })
+    }
 }   
 
-module.exports = { GET_MONEY, GET, POST }
+module.exports = { GET, POST }
