@@ -1,7 +1,10 @@
-const path = require('path')
-
-const GET = (req, res) => {
-    res.sendFile(path.join(process.cwd(), 'src', 'views', 'expance.html'))
+const GET_MONEY = (req, res) => {
+    res.render('income.html')
 }
 
-module.exports = { GET }
+const GET = (req, res) => {
+     
+}
+
+module.exports = { GET, GET_MONEY }
+

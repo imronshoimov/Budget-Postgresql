@@ -1,7 +1,5 @@
-const path = require('path')
-
 const GET_MONEY = (req, res) => {
-    res.sendFile(path.join(process.cwd(), 'src', 'views', 'income.html'))
+    res.render('income.html')
 }
 
 const GET = (req, res) => {

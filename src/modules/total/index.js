@@ -1,5 +1,7 @@
 const router = require('express').Router()
-const { GET } = require('./controller')
+const { GET, GET_MONEY } = require('./controller')
+
+router.route('/total/money').get(GET_MONEY)
 
 router.route('/tolal')
     .get(GET)
