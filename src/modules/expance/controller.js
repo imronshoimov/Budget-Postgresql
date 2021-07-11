@@ -1,10 +1,27 @@
-const GET_MONEY = (req, res) => {
-    res.render('income.html')
+const model = require('./model')
+
+const GET = async (req, res) => {
+    console.log(await model.getExpances());
+    res.render('expance.html', { expances: await model.getExpances() })
 }
 
-const GET = (req, res) => {
-     
-}
+const POST = (req, res) => {
+    try {
+        let data = model.insertExpance(req.body)
+        res.redirect('/expance')
+    } catch(error){
+        res.status(400).json({ message: error.message })
+    }
+}   
 
-module.exports = { GET, GET_MONEY }
+const DELETE = (req, res) => {
+    try {
+        let data = model.deleteExpance(req.params)
+        res.redirect('/expance')
+    } catch(error){
+        res.status(400).json({ message: error.message })
+    }
+}  
+
+module.exports = { GET, POST, DELETE }
 

@@ -1,7 +1,7 @@
 const model = require('./model')
 
 const GET = async (req, res) => {
-    res.render('income.html', { expances: await model.getExpances() })
+    res.render('income.html', { incomes: await model.getIncomes() })
 }
 
 const POST = (req, res) => {

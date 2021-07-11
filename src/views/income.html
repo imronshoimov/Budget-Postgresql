@@ -14,17 +14,17 @@
 				<th>Maqsad</th>
 				<th>Summa</th>
 				<th>Sana</th>
-				<th>clear</th>
+				<th>o'chirish</th>
 			</tr>
 		</thead>
 		<tbody class="income-table">
-			 <% for(let i in expances) {%>
+			 <% for(let i in incomes) {%>
 				<tr>
 					<td><%= +i + 1 %></td>
-					<td><%= expances[i].type %></td>
-					<td><%= expances[i].cost %></td>
-					<td><%= expances[i].date %></td>
-					<td><a href="/income/delete/<%= expances[i].id%>">delete</a></td>
+					<td><%= incomes[i].type %></td>
+					<td><%= incomes[i].cost %></td>
+					<td><%= incomes[i].date %></td>
+					<td><a href="/income/delete/<%= incomes[i].id%>">delete</a></td>
 				</tr>
 			 <% } %>
 		</tbody>

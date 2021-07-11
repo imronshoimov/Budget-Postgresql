@@ -17,8 +17,8 @@ const INSERT_INCOME = `
     RETURNING *;
 `
 
-const getExpances = () => fetchAll(INCOMES)
+const getIncomes = () => fetchAll(INCOMES)
 
 const insertIncome = ({ type, cost }) => fetch(INSERT_INCOME, type, cost - 0)
 
-module.exports = { getExpances, insertIncome }
+module.exports = { getIncomes, insertIncome }

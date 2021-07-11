@@ -14,19 +14,27 @@
 				<th>Maqsad</th>
 				<th>Summa</th>
 				<th>Sana</th>
+				<th>o'chirish</th>
 			</tr>
 		</thead>
 		<tbody class="expance-table">
-			 
+			<% for(let i in expances) {%>
+				<tr>
+					<td><%= +i + 1 %></td>
+					<td><%= expances[i].type %></td>
+					<td><%= expances[i].cost %></td>
+					<td><%= expances[i].date %></td>
+					<td><a href="/expance/delete/<%= expances[i].id%>">delete</a></td>
+				</tr>
+			 <% } %>
 		</tbody>
 	</table>
 
-	<form id="expance-form">
-		<input id="target" type="text" name="text" required placeholder="Expance from...">
-		<input id="money" type="number" name="name" required placeholder="How much...">
+	<form id="expance-form" action="/expance" method="POST">
+		<input id="target" type="text" name="type" required placeholder="Expance from...">
+		<input id="money" type="number" name="cost" required placeholder="How much...">
 		<button class="button addExpance" id="addExpance" type="submit">add</button>
 	</form>
 
-	<script src="/js/expance.js"></script>	
 </body>
 </html>
