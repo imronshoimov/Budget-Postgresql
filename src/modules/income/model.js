@@ -5,8 +5,8 @@ const INCOMES = `
         id,
         type,
         cost,
-        date
-    FROM expance;
+        TO_CHAR(date, 'yyyy-MM-dd HH24:MI:SS') as date
+    FROM income;
 `
 
 const INSERT_INCOME = `
@@ -14,11 +14,11 @@ const INSERT_INCOME = `
         type,
         cost
     ) VALUES ($1, $2)
-    RETURNING *
+    RETURNING *;
 `
 
 const getExpances = () => fetchAll(INCOMES)
 
-const insertIncome = ({ type, cost }) => fetch(INSERT_INCOME, type, +cost)
+const insertIncome = ({ type, cost }) => fetch(INSERT_INCOME, type, cost - 0)
 
 module.exports = { getExpances, insertIncome }
