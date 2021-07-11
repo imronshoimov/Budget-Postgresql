@@ -7,6 +7,8 @@ const { PORT } = require('./config')
 const app = express()
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.urlencoded({ extended: true }))
+
 app.engine('html', ejs.renderFile)
 app.set('view engine', 'html')
 app.set('views', path.join(__dirname, 'views'))
