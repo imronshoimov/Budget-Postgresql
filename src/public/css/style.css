@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+	height: 100vh;  
+	font-size: 17px;
+	background: linear-gradient(to top left, powderblue, pink);
+}
+
+.container {
+    margin: 0 auto;
+    width: 1140px;
+}
+

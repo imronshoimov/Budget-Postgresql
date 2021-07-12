@@ -7,6 +7,12 @@
 	<link rel="stylesheet" href="/css/total.css">
 </head>
 <body>
+	<nav class="nav">
+        <div class="container">
+            <h1>Balance</h1>
+            <%- include('nav.html', { links: ['income', 'expance', 'balance'] }) %>
+        </div>
+    </nav>
 	<ul class="total__list">
 		<li class="total__item">
 			<p class="total__text">Total:</p> 

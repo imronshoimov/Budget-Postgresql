@@ -7,6 +7,12 @@
 	<link rel="stylesheet" href="/css/income.css">
 </head>
 <body>
+	<nav class="nav">
+        <div class="container">
+            <h1>Income</h1>
+            <%- include('nav.html', { links: ['income', 'expance', 'balance'] }) %>
+        </div>
+    </nav>
 	<table>
 		<thead>
 			<tr>
@@ -35,7 +41,5 @@
 		<input id="money" type="number" name="cost" required placeholder="How much...">
 		<button class="button addIncome" id="addIncome" type="submit">add</button>
 	</form>
-
-	<!-- <script src="/js/income.js"></script> -->
 </body>
 </html>

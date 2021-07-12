@@ -7,6 +7,12 @@
 	<link rel="stylesheet" href="/css/expance.css">
 </head>
 <body>
+	<nav class="nav">
+        <div class="container">
+            <h1>Expance</h1>
+            <%- include('nav.html', { links: ['income', 'expance', 'balance'] }) %>
+        </div>
+    </nav>
 	<table>
 		<thead>
 			<tr>

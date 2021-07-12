@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const { GET } = require('./controller')
 
-router.route('/total')
+router.route('/balance')
     .get(GET)
 
 module.exports = router

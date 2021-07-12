@@ -49,15 +49,6 @@ th, td {
 	margin-bottom: 25px;
 }
 
-a {
-	text-decoration: none;
-	color: white;
-	font-size: 25px;
-	background-color: rgba(255, 0, 0, 0.4);
-	padding: 15px;
-	border-radius: 5px;
-}
-
 #income-form {
 	margin-top: 15px;
 	width:  55%;
