@@ -15,7 +15,5 @@ CREATE TABLE expance (
 );
 
 
-INSERT INTO income (
-        type,
-        cost
-    ) VALUES ('biznes', 300);
+INSERT INTO income (type, cost) VALUES ('biznes', 300);
+INSERT INTO expance (type, cost) VALUES ('oziq-ovqat', 100);
