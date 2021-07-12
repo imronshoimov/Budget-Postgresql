@@ -21,7 +21,7 @@
 					<% for(let m in total[1]) { %>
 						<% let income = +total[0][i].sum %>
 						<% let expance = +total[1][m].sum %>
-						<p class="total__cost">$<%= income + expance %></p> 
+						<p class="total__cost">$<%= income - expance %></p> 
 					<% } %>
 				<% } %>
 			</li>
