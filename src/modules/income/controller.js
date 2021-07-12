@@ -7,7 +7,7 @@ const GET = async (req, res) => {
 const POST = (req, res) => {
     try {
         let data = model.insertIncome(req.body)
-        res.redirect('/income')
+        res.status(201).redirect('/income')
     } catch(error){
         res.status(400).json({ message: error.message })
     }

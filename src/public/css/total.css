@@ -9,13 +9,23 @@ ul {
 }
 
 body {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	font-size: 17px;
 	background: linear-gradient(to top left, powderblue, pink);
+	background-attachment: fixed;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1140px;
+}
+
+.nav .container {
+    margin-top: 20px;
+}
+
+.nav-title {
+    font-size: 40px;
+    color: aliceblue;
 }
 
 .link {
@@ -29,11 +39,11 @@ body {
 .total__list {
 	background-color: rgba(0, 0, 0, 0.2);
 	padding:  30px 50px;
-	width:  30%;
+	width:  100%;
 }
 
 .total__item {
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 500;	
 	color: white;
 	margin: 10px 0;

@@ -2,22 +2,34 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-size: 25px;
 }
 
 body {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	font-size: 17px;
 	background: linear-gradient(to top left, powderblue, pink);
+	background-attachment: fixed;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1140px;
+}
+
+.nav .container {
+    margin-top: 20px;
+}
+
+.nav-title {
+    font-size: 40px;
+    color: aliceblue;
 }
 
 table {
-	width: 55%;
+	width: 100%;
 	border-collapse: collapse;
 	border-radius: 10%;
+	margin-bottom: 50px;
 }
 
 thead {
@@ -50,8 +62,9 @@ th, td {
 }
 
 #expance-form {
-	margin-top: 15px;
-	width:  55%;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	width:  100%;
 	display: flex;
 }
 

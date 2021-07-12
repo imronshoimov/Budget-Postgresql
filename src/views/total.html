@@ -9,24 +9,26 @@
 <body>
 	<nav class="nav">
         <div class="container">
-            <h1>Balance</h1>
+            <h1 class="nav-title">Balance</h1>
             <%- include('nav.html', { links: ['income', 'expance', 'balance'] }) %>
         </div>
     </nav>
-	<ul class="total__list">
-		<li class="total__item">
-			<p class="total__text">Total:</p> 
-			<p class="total__cost"></p> 
-		</li>
-		<li class="total__item">
-			<p class="income__text">Income:</p> 
-			<p class="income__cost"></p>  
-		</li>
-		<li class="total__item">
-			<p class="expance__text">Expance:</p> 
-			<p class="expance__cost"></p>  
-		</li>
-	</ul>
+	<div class="container">
+		<ul class="total__list">
+			<li class="total__item">
+				<p class="total__text">Total:</p> 
+				<p class="total__cost"></p> 
+			</li>
+			<li class="total__item">
+				<p class="income__text">Income:</p> 
+				<p class="income__cost"></p>  
+			</li>
+			<li class="total__item">
+				<p class="expance__text">Expance:</p> 
+				<p class="expance__cost"></p>  
+			</li>
+		</ul>
+	</div>
 
 	<script src="/js/total.js"></script>
 </body>

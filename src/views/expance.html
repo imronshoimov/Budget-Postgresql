@@ -9,38 +9,43 @@
 <body>
 	<nav class="nav">
         <div class="container">
-            <h1>Expance</h1>
+            <h1 class="nav-title">Expance</h1>
             <%- include('nav.html', { links: ['income', 'expance', 'balance'] }) %>
         </div>
     </nav>
-	<table>
-		<thead>
-			<tr>
-				<th>№</th>
-				<th>Maqsad</th>
-				<th>Summa</th>
-				<th>Sana</th>
-				<th>o'chirish</th>
-			</tr>
-		</thead>
-		<tbody class="expance-table">
-			<% for(let i in expances) {%>
-				<tr>
-					<td><%= +i + 1 %></td>
-					<td><%= expances[i].type %></td>
-					<td><%= expances[i].cost %></td>
-					<td><%= expances[i].date %></td>
-					<td><a href="/expance/delete/<%= expances[i].id%>">delete</a></td>
-				</tr>
-			 <% } %>
-		</tbody>
-	</table>
 
-	<form id="expance-form" action="/expance" method="POST">
-		<input id="target" type="text" name="type" required placeholder="Expance from...">
-		<input id="money" type="number" name="cost" required placeholder="How much...">
-		<button class="button addExpance" id="addExpance" type="submit">add</button>
-	</form>
+	<div class="container">
+		<form id="expance-form" action="/expance" method="POST">
+			<input id="target" type="text" name="type" required placeholder="Expance from...">
+			<input id="money" type="number" name="cost" required placeholder="How much...">
+			<button class="button addExpance" id="addExpance" type="submit">add</button>
+		</form>
+	</div>
+
+	<div class="container">
+		<table>
+			<thead>
+				<tr>
+					<th>№</th>
+					<th>Maqsad</th>
+					<th>Summa</th>
+					<th>Sana</th>
+					<th>o'chirish</th>
+				</tr>
+			</thead>
+			<tbody class="expance-table">
+				<% for(let i in expances) {%>
+					<tr>
+						<td><%= +i + 1 %></td>
+						<td><%= expances[i].type %></td>
+						<td><%= expances[i].cost %></td>
+						<td><%= expances[i].date %></td>
+						<td><a href="/expance/delete/<%= expances[i].id%>">delete</a></td>
+					</tr>
+				 <% } %>
+			</tbody>
+		</table>
+	</div>
 
 </body>
 </html>
