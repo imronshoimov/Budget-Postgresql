@@ -17,19 +17,28 @@
 		<ul class="total__list">
 			<li class="total__item">
 				<p class="total__text">Total:</p> 
-				<p class="total__cost"></p> 
+				<% for(let i in total[0]) { %>
+					<% for(let m in total[1]) { %>
+						<% let income = +total[0][i].sum %>
+						<% let expance = +total[1][m].sum %>
+						<p class="total__cost">$<%= income + expance %></p> 
+					<% } %>
+				<% } %>
 			</li>
 			<li class="total__item">
 				<p class="income__text">Income:</p> 
-				<p class="income__cost"></p>  
+				<% for(let i in incomes) { %>
+					<p class="income__cost">$<%= incomes[i].sum %></p>  
+				<% } %>
 			</li>
 			<li class="total__item">
 				<p class="expance__text">Expance:</p> 
-				<p class="expance__cost"></p>  
-			</li>
+				<% for(let i in expances) { %>
+					<p class="expance__cost">$<%= expances[i].sum %></p>  
+				<% } %>
+			</li>	
 		</ul>
 	</div>
 
-	<script src="/js/total.js"></script>
 </body>
 </html>
